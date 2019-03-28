@@ -1,0 +1,42 @@
+<% include partials/header %>
+<br>
+
+    <div class="container text-center">
+            <br>
+            <h3>Edit the Campground</h3>
+            <br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 col-sm-6 col-xs-10">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        Edit <%= campground.title %>
+                    </div>
+                    <div class="panel-body">
+                        <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="<%= campground.title %>" name="campground[title]" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" value="<%= campground.image %>" name="campground[image]" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" value="<%= campground.price %>" name="campground[price]" step="1" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea type="text" class="form-control"  name="campground[description]"><%= campground.description %></textarea>
+                            </div>
+                            <button class="btn btn-info btn-sm">Update</button>
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/campgrounds" class="btn btn-warning btn-sm">Back</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+<br>
+<% include partials/footer %>

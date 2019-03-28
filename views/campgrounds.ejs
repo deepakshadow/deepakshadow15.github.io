@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<br>
+<div class="container text-center">
+    <br>
+    <h2>All Campgrounds</h2>
+    <br>
+    <a href="/campgrounds/new" class="btn btn-success">Add New Campgrounds</a>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <% campgrounds.forEach(function(campground) { %>
+            <div class="col-md-3">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="<%= campground.image %>" alt="Card image cap">
+                    <div class="caption">
+                        <h4><%= campground.title %></h4>
+                    </div>
+                    <p>
+                        <a href="/campgrounds/<%=campground._id%>" class="btn btn-primary btn-sm">View More</a>
+                    </p>
+                </div>
+                <br>
+            </div> 
+      <%  }) %>
+
+    </div>
+    <br>
+</div>
+<br>
+
+<% include partials/footer %>

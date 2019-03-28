@@ -1,0 +1,31 @@
+<% include partials/header %>
+<br>
+
+    <div class="container text-center">
+            <br>
+            <h3>Edit comment to <%= campground.title%></h3>
+            <br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 col-sm-6 col-xs-10">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        Edit comment
+                    </div>
+                    <div class="panel-body">
+                        <form action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                            <div class="form-group">
+                                <textarea type="text" class="form-control" name="comment[text]"><%= comment.text %></textarea>
+                            </div>
+                            <button class="btn btn-info btn-sm">Submit</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+<br>
+<% include partials/footer %>

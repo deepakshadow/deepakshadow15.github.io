@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2>Login</h2>
+        <form action="/login" method="POST">
+            <div class="panel panel-default">
+                <div class="panel-heading">User Login</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <input type="text" placeholder=" username" name="username" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder=" password" name="password" required/> 
+                    </div>
+                    <input type="submit" class="btn btn-xs btn-primary" value="login"/>
+                    <input type="reset" class="btn btn-xs btn-warning" value="Reset"/>
+                </div>
+                <div class="panel-footer">
+                    <a href="/register" class="btn btn-info btn-xs">Register</a>
+                </div>
+            </div>
+        </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

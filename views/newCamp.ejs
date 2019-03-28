@@ -1,0 +1,42 @@
+<% include partials/header %>
+<br>
+
+    <div class="container text-center">
+            <br>
+            <h3>Add A New Campground</h3>
+            <br>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 col-sm-6 col-xs-10">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        Add campground
+                    </div>
+                    <div class="panel-body">
+                        <form action="/campgrounds" method="POST">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter name" name="campground[title]" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter Image Url" name="campground[image]" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Enter Price" name="campground[price]" min="1" step="1" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea type="text" class="form-control" placeholder="Enter description" name="campground[description]"></textarea>
+                            </div>
+                            <button class="btn btn-info btn-sm">Submit</button>
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <a href="/campgrounds" class="btn btn-warning btn-sm">Back</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+<br>
+<% include partials/footer %>
